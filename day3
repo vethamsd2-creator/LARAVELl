@@ -1,0 +1,44 @@
+<?php
+class Student {
+    public $name;
+    public $age;
+    public $rollNo;
+    public $email;
+    public $phone;
+    public $address;
+    public $gender;
+    public $department;
+    public $year;
+    public $college;
+
+    
+    public function showDetails($name, $age, $rollNo, $email, $phone, $address, $gender, $department, $year, $college) {
+        echo "Name: $name <br>";
+        echo "Age: $age <br>";
+        echo "Roll No: $rollNo <br>";
+        echo "Email: $email <br>";
+        echo "Phone: $phone <br>";
+        echo "Address: $address <br>";
+        echo "Gender: $gender <br>";
+        echo "Department: $department <br>";
+        echo "Year: $year <br>";
+        echo "College: $college <br>";
+    }
+}
+
+
+$stu1 = new Student();
+
+$stu1->showDetails(
+    "Vetha Chandran",
+    20,
+    "37290952",
+    "vetha@gmail.com",
+    "9876543210",
+    "Chennai, Tamil Nadu",
+    "Male",
+    "Computer Science",
+    "3rd Year",
+    "Sathyabama"
+);
+?>
