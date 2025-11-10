@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> String Functions </title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f6fa;
+        color: #2f3640;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    h1 {
+        color: #273c75;
+        margin-bottom: 20px;
+    }
+    .container {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 80%;
+        max-width: 700px;
+        padding: 25px;
+    }
+    .function-block {
+        border-bottom: 1px solid #dcdde1;
+        padding: 15px 0;
+    }
+    .function-block:last-child {
+        border-bottom: none;
+    }
+    .title {
+        font-weight: bold;
+        color: #192a56;
+    }
+    code {
+        background: #f0f0f0;
+        padding: 3px 6px;
+        border-radius: 5px;
+    }
+    .result {
+        color: #0097e6;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>  String Functions </h1>
+
+<div class="container">
+
+<?php
+$sentence = "Dream in logic, code in PHP!";
+
+echo "<div class='function-block'>
+        <div class='title'>1️⃣ strlen()</div>
+        <code>strlen(\$sentence)</code> → 
+        <span class='result'>" . strlen($sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>2️⃣ str_word_count()</div>
+        <code>str_word_count(\$sentence)</code> → 
+        <span class='result'>" . str_word_count($sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>3️⃣ strpos()</div>
+        <code>strpos(\$sentence, 'PHP')</code> → 
+        <span class='result'>" . strpos($sentence, "PHP") . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>4️⃣ strtoupper()</div>
+        <code>strtoupper(\$sentence)</code> → 
+        <span class='result'>" . strtoupper($sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>5️⃣ strtolower()</div>
+        <code>strtolower(\$sentence)</code> → 
+        <span class='result'>" . strtolower($sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>6️⃣ str_replace()</div>
+        <code>str_replace('PHP', 'HTML', \$sentence)</code> → 
+        <span class='result'>" . str_replace("PHP", "HTML", $sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>7️⃣ strrev()</div>
+        <code>strrev(\$sentence)</code> → 
+        <span class='result'>" . strrev($sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>8️⃣ trim()</div>
+        <code>trim(\$sentence)</code> → 
+        <span class='result'>" . trim($sentence) . "</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>9️⃣ explode()</div>
+        <code>explode(' ', trim(\$sentence))</code> → 
+        <span class='result'>";
+print_r(explode(" ", trim($sentence)));
+echo "</span>
+      </div>";
+
+$first = "PHP ";
+$second = "is powerful!";
+$concat = $first . $second;
+
+echo "<div class='function-block'>
+        <div class='title'>🔟 String Concatenation (.)</div>
+        <code>\$first . \$second</code> → 
+        <span class='result'>$concat</span>
+      </div>";
+
+echo "<div class='function-block'>
+        <div class='title'>1️⃣1️⃣ substr()</div>
+        <code>substr(\$sentence, 9, 3)</code> → 
+        <span class='result'>" . substr($sentence, 9, 3) . "</span>
+      </div>";
+?>
+
+</div>
+
+</body>
+</html>
