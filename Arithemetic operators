@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHP Arithmetic Operators</title>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #a8edea, #fed6e3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        color: #2f3640;
+    }
+    h1 {
+        color: #273c75;
+        margin-bottom: 25px;
+    }
+    .container {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 25px 35px;
+        width: 80%;
+        max-width: 700px;
+    }
+    .operator {
+        padding: 10px 0;
+        border-bottom: 1px solid #dcdde1;
+    }
+    .operator:last-child {
+        border-bottom: none;
+    }
+    .title {
+        font-weight: bold;
+        color: #192a56;
+    }
+    code {
+        background: #f0f0f0;
+        padding: 3px 8px;
+        border-radius: 5px;
+    }
+    .result {
+        color: #0097e6;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<h1>  Arithmetic Operators  </h1>
+
+<div class="container">
+
+<?php
+$a = 75;
+$b = 50;
+
+echo "<div class='operator'>
+        <div class='title'>1️⃣ Addition (+)</div>
+        <code>\$a + \$b</code> = 
+        <span class='result'>" . ($a + $b) . "</span>
+      </div>";
+
+echo "<div class='operator'>
+        <div class='title'>2️⃣ Subtraction (-)</div>
+        <code>\$a - \$b</code> = 
+        <span class='result'>" . ($a - $b) . "</span>
+      </div>";
+
+echo "<div class='operator'>
+        <div class='title'>3️⃣ Multiplication (*)</div>
+        <code>\$a * \$b</code> = 
+        <span class='result'>" . ($a * $b) . "</span>
+      </div>";
+
+echo "<div class='operator'>
+        <div class='title'>4️⃣ Division (/)</div>
+        <code>\$a / \$b</code> = 
+        <span class='result'>" . ($a / $b) . "</span>
+      </div>";
+
+echo "<div class='operator'>
+        <div class='title'>5️⃣ Modulus (%)</div>
+        <code>\$a % \$b</code> = 
+        <span class='result'>" . ($a % $b) . "</span>
+      </div>";
+
+echo "<div class='operator'>
+        <div class='title'>6️⃣ Exponentiation (**)</div>
+        <code>\$a ** 2</code> = 
+        <span class='result'>" . ($a ** 2) . "</span>
+      </div>";
+?>
+
+</div>
+
+</body>
+</html>
